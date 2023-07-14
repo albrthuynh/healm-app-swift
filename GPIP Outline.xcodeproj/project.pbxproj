@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5060C58E2A45FB15005C988B /* Bandage Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060C58D2A45FB15005C988B /* Bandage Data.swift */; };
+		5060C59C2A4B5B9C005C988B /* AddBandageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060C59B2A4B5B9C005C988B /* AddBandageView.swift */; };
+		5060C5EE2A55E7CE005C988B /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060C5ED2A55E7CE005C988B /* SplashScreenView.swift */; };
+		5060C5F12A56051B005C988B /* SumOfHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060C5F02A56051B005C988B /* SumOfHealthView.swift */; };
+		5060C6082A586DF7005C988B /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060C6072A586DF7005C988B /* AddContactView.swift */; };
+		5060C60F2A587539005C988B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060C60E2A587539005C988B /* ContentView.swift */; };
+		5060C6122A588350005C988B /* ContactDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5060C6102A588350005C988B /* ContactDataModel.xcdatamodeld */; };
+		509BAF5D2A43A0AE00EE3EBE /* GPIP_OutlineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509BAF5C2A43A0AE00EE3EBE /* GPIP_OutlineApp.swift */; };
+		509BAF612A43A0AE00EE3EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509BAF602A43A0AE00EE3EBE /* Assets.xcassets */; };
+		509BAF642A43A0AE00EE3EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509BAF632A43A0AE00EE3EBE /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5060C58D2A45FB15005C988B /* Bandage Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bandage Data.swift"; sourceTree = "<group>"; };
+		5060C59B2A4B5B9C005C988B /* AddBandageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBandageView.swift; sourceTree = "<group>"; };
+		5060C5ED2A55E7CE005C988B /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		5060C5EF2A55EDB5005C988B /* GPIP-Outline-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GPIP-Outline-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5060C5F02A56051B005C988B /* SumOfHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumOfHealthView.swift; sourceTree = "<group>"; };
+		5060C6072A586DF7005C988B /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		5060C60E2A587539005C988B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5060C6112A588350005C988B /* ContactDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactDataModel.xcdatamodel; sourceTree = "<group>"; };
+		509BAF592A43A0AE00EE3EBE /* GPIP Outline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPIP Outline.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		509BAF5C2A43A0AE00EE3EBE /* GPIP_OutlineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPIP_OutlineApp.swift; sourceTree = "<group>"; };
+		509BAF602A43A0AE00EE3EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		509BAF632A43A0AE00EE3EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		509BAF562A43A0AE00EE3EBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5060C5E92A4F6615005C988B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5060C5ED2A55E7CE005C988B /* SplashScreenView.swift */,
+				5060C60E2A587539005C988B /* ContentView.swift */,
+				5060C59B2A4B5B9C005C988B /* AddBandageView.swift */,
+				5060C58D2A45FB15005C988B /* Bandage Data.swift */,
+				5060C5FD2A56108A005C988B /* IconViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5060C5FD2A56108A005C988B /* IconViews */ = {
+			isa = PBXGroup;
+			children = (
+				5060C5F02A56051B005C988B /* SumOfHealthView.swift */,
+				5060C6072A586DF7005C988B /* AddContactView.swift */,
+			);
+			path = IconViews;
+			sourceTree = "<group>";
+		};
+		509BAF502A43A0AE00EE3EBE = {
+			isa = PBXGroup;
+			children = (
+				509BAF5B2A43A0AE00EE3EBE /* GPIP Outline */,
+				509BAF5A2A43A0AE00EE3EBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		509BAF5A2A43A0AE00EE3EBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				509BAF592A43A0AE00EE3EBE /* GPIP Outline.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		509BAF5B2A43A0AE00EE3EBE /* GPIP Outline */ = {
+			isa = PBXGroup;
+			children = (
+				5060C5EF2A55EDB5005C988B /* GPIP-Outline-Info.plist */,
+				509BAF5C2A43A0AE00EE3EBE /* GPIP_OutlineApp.swift */,
+				5060C6102A588350005C988B /* ContactDataModel.xcdatamodeld */,
+				5060C5E92A4F6615005C988B /* Views */,
+				509BAF602A43A0AE00EE3EBE /* Assets.xcassets */,
+				509BAF622A43A0AE00EE3EBE /* Preview Content */,
+			);
+			path = "GPIP Outline";
+			sourceTree = "<group>";
+		};
+		509BAF622A43A0AE00EE3EBE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				509BAF632A43A0AE00EE3EBE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		509BAF582A43A0AE00EE3EBE /* GPIP Outline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 509BAF672A43A0AE00EE3EBE /* Build configuration list for PBXNativeTarget "GPIP Outline" */;
+			buildPhases = (
+				509BAF552A43A0AE00EE3EBE /* Sources */,
+				509BAF562A43A0AE00EE3EBE /* Frameworks */,
+				509BAF572A43A0AE00EE3EBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GPIP Outline";
+			productName = "GPIP Outline";
+			productReference = 509BAF592A43A0AE00EE3EBE /* GPIP Outline.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		509BAF512A43A0AE00EE3EBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					509BAF582A43A0AE00EE3EBE = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 509BAF542A43A0AE00EE3EBE /* Build configuration list for PBXProject "GPIP Outline" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 509BAF502A43A0AE00EE3EBE;
+			productRefGroup = 509BAF5A2A43A0AE00EE3EBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				509BAF582A43A0AE00EE3EBE /* GPIP Outline */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		509BAF572A43A0AE00EE3EBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				509BAF642A43A0AE00EE3EBE /* Preview Assets.xcassets in Resources */,
+				509BAF612A43A0AE00EE3EBE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		509BAF552A43A0AE00EE3EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5060C5EE2A55E7CE005C988B /* SplashScreenView.swift in Sources */,
+				5060C5F12A56051B005C988B /* SumOfHealthView.swift in Sources */,
+				5060C60F2A587539005C988B /* ContentView.swift in Sources */,
+				5060C58E2A45FB15005C988B /* Bandage Data.swift in Sources */,
+				5060C6082A586DF7005C988B /* AddContactView.swift in Sources */,
+				509BAF5D2A43A0AE00EE3EBE /* GPIP_OutlineApp.swift in Sources */,
+				5060C59C2A4B5B9C005C988B /* AddBandageView.swift in Sources */,
+				5060C6122A588350005C988B /* ContactDataModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		509BAF652A43A0AE00EE3EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		509BAF662A43A0AE00EE3EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		509BAF682A43A0AE00EE3EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GPIP Outline/Preview Content\"";
+				DEVELOPMENT_TEAM = G255F2LV66;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GPIP-Outline-Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Please allow bluetooth for us of the peripherals";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Please allow bluetooth for indentifying the peripherals";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Albert-Huynh.GPIP-Outline";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		509BAF692A43A0AE00EE3EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GPIP Outline/Preview Content\"";
+				DEVELOPMENT_TEAM = G255F2LV66;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GPIP-Outline-Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Please allow bluetooth for us of the peripherals";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Please allow bluetooth for indentifying the peripherals";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Albert-Huynh.GPIP-Outline";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		509BAF542A43A0AE00EE3EBE /* Build configuration list for PBXProject "GPIP Outline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509BAF652A43A0AE00EE3EBE /* Debug */,
+				509BAF662A43A0AE00EE3EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		509BAF672A43A0AE00EE3EBE /* Build configuration list for PBXNativeTarget "GPIP Outline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509BAF682A43A0AE00EE3EBE /* Debug */,
+				509BAF692A43A0AE00EE3EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5060C6102A588350005C988B /* ContactDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5060C6112A588350005C988B /* ContactDataModel.xcdatamodel */,
+			);
+			currentVersion = 5060C6112A588350005C988B /* ContactDataModel.xcdatamodel */;
+			path = ContactDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 509BAF512A43A0AE00EE3EBE /* Project object */;
+}
