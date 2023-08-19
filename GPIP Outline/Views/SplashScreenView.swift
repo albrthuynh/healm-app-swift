@@ -15,12 +15,11 @@ struct SplashScreenView: View {
     
     var body: some View {
         if isActive{
-            ContentView()
+            SignInView(showSignInView: .constant(true))
         }
         else{
             ZStack{
                 Color("Background").edgesIgnoringSafeArea(.all)
-                VStack{
                     VStack{
                         Image(systemName: "cross.case.fill")
                             .font(.system(size: 80))
@@ -48,7 +47,6 @@ struct SplashScreenView: View {
         }
         
     }
-}
 
 struct SplashScreenView_Previews: PreviewProvider {
     static var previews: some View {

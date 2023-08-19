@@ -9,34 +9,7 @@ import SwiftUI
 import CoreBluetooth
 import CoreData
 
-class BluetoothViewModel: NSObject, ObservableObject {
-    private var centralManager: CBCentralManager?
-    private var peripherals: [CBPeripheral] = []
-    @Published var peripheralNames: [String] = []
-    
-    override init(){
-        super.init()
-        self.centralManager = CBCentralManager(delegate: self, queue: .main)
-    }
-}
-
-extension BluetoothViewModel: CBCentralManagerDelegate {
-    func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        if central.state == .poweredOn{
-            self.centralManager?.scanForPeripherals(withServices: nil)
-        }
-    }
-    
-    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        if !peripherals.contains(peripheral){
-            self.peripherals.append(peripheral)
-            self.peripheralNames.append(peripheral.name ?? "unnamed device")
-        }
-    }
-}
-
 struct ContentView: View {
-    @ObservedObject private var bluetoothViewModel = BluetoothViewModel()
     
     static let numOfBandages = 10
     @State var phLevel = 1
@@ -45,92 +18,98 @@ struct ContentView: View {
     
     let width = (UIScreen.main.bounds.width / 3) - 20
     
+    @Binding var showSignInView: Bool
+    
+    @ObservedObject private var bluetoothManager = BluetoothManager.shared
+
     var body: some View {
-        
-        NavigationStack{
-            ZStack{
-                
-                ScrollView{
-                    VStack(alignment: .center){
+        NavigationStack {
+            ZStack {
+                Color("Background")
+                    .ignoresSafeArea()
+                ScrollView {
+                    VStack(spacing: 20){
                         
-                        Color("Background")
-                        //
-                        //                        Text("Heal'm").font(.largeTitle).fontWeight(.semibold).foregroundColor(.black)
+                        
                         ForEach(0..<ContentView.row, id: \.self) { i in
-                            HStack{
+                            HStack(spacing: 20){
                                 ForEach(0..<ContentView.column, id: \.self) { j in
                                     let index = i * ContentView.column + j
-                                    if index < ContentView.numOfBandages{
-                                        NavigationLink(destination:GraphView()) {
-                                            //Icon Itself Start
-                                            VStack{
-                                                ZStack{
-                                                    if phLevel < 7{
-                                                        Rectangle().frame(height: UIScreen.main.bounds.height / CGFloat(ContentView.numOfBandages)).foregroundColor(.blue).cornerRadius(20).frame(width: 100)
-                                                    }
-                                                    else{
-                                                        Rectangle().frame(height: UIScreen.main.bounds.height / CGFloat(ContentView.numOfBandages)).foregroundColor(.red).cornerRadius(20).frame(width: 50)
-                                                    }
-                                                    
-                                                    Image(systemName: "cross.case.fill")
-                                                    
-                                                    //                                                    Image("bandagePROFESSOR").resizable().aspectRatio(contentMode: .fit)
-                                                }
-                                                Text("Bandage #" + String(i * ContentView.column + j + 1))
+                                    
+                                    //changed
+                                    if index < bluetoothManager.bluetoothViewModel.connectedDeviceCount {
+                                        let destination = AddBandageView()
+                                        let icon = VStack(spacing: 8){
+                                            ZStack {
+                                                RoundedRectangle(cornerRadius: 20)
+                                                    .frame(height: 80)
+                                                    .foregroundColor(phLevel < 7 ? .blue : .red)
                                                 
+                                                Image(systemName: "cross.case.fill")
                                             }
-                                            //Icon itself end
+                                            Text("Bandage " + String(i * ContentView.column + j + 1))
+                                                .font(.headline)
+                                        }
+                                            .frame(width: 100)
+                                        
+                                        NavigationLink(destination: destination) {
+                                            icon
                                         }.buttonStyle(PlainButtonStyle())
                                     }
                                 }
                             }
                         }
                         .padding()
-                        
                     }
-                    .navigationBarTitle(Text("Heal'm")).padding()
-                    //bottom icons
-                    ZStack{
-                        VStack{
-                            HStack{
-                               
-                                Spacer()
-                                NavigationLink(destination:
-                                                List(bluetoothViewModel.peripheralNames, id: \.self){peripheral in
-                                    Text(peripheral)
-                                }.navigationTitle("Peripherals")
-                                ){
-                                    Image(systemName: "icloud")
-                                }.buttonStyle(PlainButtonStyle())
-                                Spacer()
-                                NavigationLink(destination: SumOfHealthView()) {
-                                    Image(systemName: "cross")
-                                }.buttonStyle(PlainButtonStyle())
+                    .navigationBarTitle(Text("Heal'm"))
+                    
+                    
+                    //icons
+                    ZStack {
+                        VStack(spacing: 17) {
+                            HStack(spacing: 35) {
                                 Spacer()
                                 
-                                NavigationLink(destination: AddContactView()){
-                                    Image(systemName: "phone")
-                                    
+                                let bluetoothDestination = LogOutView(showSignInView: .constant(false))
+                                let bluetoothImage = Image(systemName: "gearshape").font(.title)
+                                
+                                NavigationLink(destination: bluetoothDestination) {
+                                    bluetoothImage
                                 }.buttonStyle(PlainButtonStyle())
+                                
+                                Spacer()
+                                
+                                let sumOfHealthDestination = BluetoothView()
+                                let sumOfHealthImage = Image(systemName: "cloud").font(.title)
+                                
+                                NavigationLink(destination: sumOfHealthDestination) {
+                                    sumOfHealthImage
+                                }.buttonStyle(PlainButtonStyle())
+                                
+                                Spacer()
+                                
+                                let addContactDestination = AddContactView()
+                                let addContactImage = Image(systemName: "phone").font(.title)
+                                
+                                NavigationLink(destination: addContactDestination) {
+                                    addContactImage
+                                }.buttonStyle(PlainButtonStyle())
+                                
                                 Spacer()
                             }
-                            
                         }
                     }
                 }
-    
+                
             }
         }
-        //end of body: some view
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-        ContentView()
-            .environment(\.colorScheme, .dark)
-        GraphView()
-        
+        ContentView( showSignInView: .constant(false))
+                
     }
 }
